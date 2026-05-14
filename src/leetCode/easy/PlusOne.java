@@ -44,7 +44,7 @@ public class PlusOne {
 
     public static void main(String[] args) {
         int[] arr = {9};
-        System.out.println(Arrays.toString(plusOne(arr)));
+        //System.out.println(Arrays.toString(plusOne(arr)));
         System.out.println(Arrays.toString(plusOnegpt(arr)));
     }
 }
