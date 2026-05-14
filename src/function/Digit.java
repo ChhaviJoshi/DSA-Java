@@ -51,8 +51,8 @@ public class Digit {
     public static void main(String[] args) {
         //System.out.println(countDig(4531));
         //revNum(431);
-        //printDig(431);
+        printDig(431);
         //printDigUsingStr(431);
-        printDigsUsingDivisor(431);
+        //printDigsUsingDivisor(431);
     }
 }
