@@ -29,10 +29,10 @@ public class SearchElementInRotatedArray {
             return i;
         } else if(target < first){
             int left = i;
-            int right = nums.length-1;
+            int right = nums.length;
             int mid = (left+right)/2;
 
-            while(left <= right) {
+            while(left < right) {
                 if(nums[mid] == target) {
                     return mid;
                 } else if (nums[mid] > target) {
@@ -66,6 +66,6 @@ public class SearchElementInRotatedArray {
 
     public static void main(String[] args) {
         int[] nums = {1,3};
-        System.out.println(search(nums, 3));
+        System.out.println(search(nums, 0));
     }
 }
