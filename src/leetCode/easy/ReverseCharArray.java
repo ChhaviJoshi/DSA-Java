@@ -28,7 +28,6 @@ public class ReverseCharArray {
             last--;
         }
         }
-    }
 
     public static void main(String[] args) {
     String[] arr = {"h","e","l","l","o"};
