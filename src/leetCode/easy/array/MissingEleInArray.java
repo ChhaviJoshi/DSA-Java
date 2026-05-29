@@ -1,6 +1,7 @@
 package leetCode.easy.array;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class MissingEleInArray {
@@ -12,6 +13,15 @@ public class MissingEleInArray {
             max = Math.max(nums[i], max);
             min = Math.min(nums[i], min);
         }
+
+//ADDED MORE TIME COMPLEXITY
+//        int max = Arrays.stream(nums)
+//                .max()
+//                .getAsInt();
+//
+//        int min = Arrays.stream(nums)
+//                .min()
+//                .getAsInt();
 
         List<Integer> list = new ArrayList<>();
         for(int i = min; i <= max; i++) {
