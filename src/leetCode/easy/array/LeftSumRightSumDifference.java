@@ -26,6 +26,7 @@ public class LeftSumRightSumDifference {
     public static void main(String[] args) {
         int[] nums = {1,2,3,4,5};
         System.out.println(Arrays.toString(leftRightDifference(nums)));
+        System.out.println("----");
         //[14,11,6,1,10]
     }
 }
