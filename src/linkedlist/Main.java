@@ -10,6 +10,7 @@ public class Main {
         list.insertLastWithoutTail(99);
         list.insertLast(99);
         list.insertAtIndex(100, 3);
+        System.out.println(list.deleteFirst());
         list.display();
     }
 }
