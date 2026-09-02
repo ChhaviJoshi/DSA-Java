@@ -11,6 +11,8 @@ public class Main {
         list.insertLast(99);
         list.insertAtIndex(100, 3);
         System.out.println(list.deleteFirst());
+        System.out.println(list.deleteLast());
+        System.out.println(list.deleteIndex(2));
         list.display();
     }
 }
