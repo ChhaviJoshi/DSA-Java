@@ -16,7 +16,7 @@ public class LL {
         node.next = head;
         head = node;
 
-        if(tail == null) {
+        if(tail == null) { //size == 0
             tail = head;
         }
 
@@ -68,7 +68,7 @@ public class LL {
     }
 
     public int deleteFirst(){
-        int val = head.value;
+        int val = head.value; //storing the value to be deleted to return at the end
         head = head.next;
 
         if(head == null) {
@@ -79,7 +79,12 @@ public class LL {
         return val;
     }
 
+    //without using get method
     public int deleteLast() {
+        if(size <= 1) {
+            deleteFirst();
+        }
+
         int val = tail.value;
         Node temp = head;
         while(temp.next.next != null) {
@@ -92,6 +97,28 @@ public class LL {
         return val;
     }
 
+    public Node get(int index) {
+        Node node = head;
+        for (int i = 0; i < index; i++) {
+            node = node.next;
+        }
+        return node;
+    }
+
+    //delete last using get method
+    public int deleteLastUsingGet() {
+        if(size <= 1) return deleteFirst();
+
+        Node secondLast = get(size - 2);
+        int val = tail.value;
+        tail = secondLast;
+        tail.next = null;
+        size--;
+
+        return val;
+    }
+
+    //without get method
     public int deleteIndex(int index) {
         Node temp = head;
         for (int i = 1; i < index; i++) {
@@ -102,6 +129,11 @@ public class LL {
         size--;
 
         return val;
+    }
+
+    //delete index using get method
+    public int deleteIndexWithGet(int index) {
+        
     }
 
     public void display() {
@@ -119,7 +151,6 @@ public class LL {
 
         public Node(int value) {
             this.value = value;
-            this.next = next;
         }
     }
 }
